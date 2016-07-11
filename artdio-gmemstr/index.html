@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.0/css/bulma.min.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <section class="hero is-fullheight">
+        <div class="hero-body container">
+            <div class="columns">
+                <div class="column is-two-thirds">
+                    <h1 id="title" class="title is-1"></h1>
+                    <h3 id="user" class="subtitle is-3"></h3>
+                    <button class="button is-medium" onclick="PrevSong();">Previous</button>
+                    <button class="button is-medium is-primary" onclick="ToggleSong();" id="toggle">Pause</button>
+                    <button class="button is-medium" onclick="NextSong();">Next</button> <br /><br />
+                    <p class="control has-addons">
+                        <input class="input" type="text" placeholder="SoundCloud Search Term" id="search">
+                        <a class="button is-info" onclick="LoadTracks(document.getElementById('search').value);">
+                          Search
+                        </a>
+                    </p>
+                </div>
+                <div class="column is-one-third">
+                    <img src="" alt="Cover Art" id="cover" class="image">
+                    <br />
+                </div>
+            </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    Developed with love by <a href="https://twitter.com/gmem_">Gabriel Simmer</a>;
+                </p>
+                <p>
+                    <img src="https://developers.soundcloud.com/assets/powered_by_black-4339b4c3c9cf88da9bfb15a16c4f6914.png">
+                </p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <script src="js/GetTracks.js"></script>
+</body>
