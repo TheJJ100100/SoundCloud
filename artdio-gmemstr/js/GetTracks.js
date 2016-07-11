@@ -73,7 +73,7 @@ function SetInfo(song) {
         document.getElementById("cover").src = art;
     }
     document.getElementById("title").innerHTML = song['title'];
-    document.getElementById("user").innerHTML = "by " + song['user']['username'] + " (" + currentSong + "/" + allTracks.length + ")";
+    document.getElementById("user").innerHTML = "by " + song['user']['username'] + " (" + (currentSong+1) + "/" + allTracks.length + ")";
 }
 
 globalPlayer.on(finish, NextSong());
